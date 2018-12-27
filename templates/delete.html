@@ -1,0 +1,12 @@
+{% extends 'header.html' %}
+
+{% block content %}
+<br>
+ <div class="container">
+      <h2><a href="{% url 'data' %}">{{ object }}</a>: Delete?</h2>
+
+<form method="post">{% csrf_token %}
+    Are you sure you want to delete "{{ object }}" ?<br/><br>
+    <input type="submit" value="Delete" />
+</form><br>
+{% endblock %}
